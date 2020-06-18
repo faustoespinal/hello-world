@@ -1,0 +1,375 @@
+
+
+@font-face {
+    font-family: "ge-iconography-webfont";
+    src: url("/fonts/ge-iconography-webfont.eot?18b7a24987eca896c7ce6b69c1b826af");
+    src: url("/fonts/ge-iconography-webfont.eot?#iefix") format("embedded-opentype"),url("/assets/fonts/ge-iconography-webfont.woff?18b7a24987eca896c7ce6b69c1b826af") format("woff"),url("/assets/fonts/ge-iconography-webfont.ttf?18b7a24987eca896c7ce6b69c1b826af") format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+.masthead {
+    background: #2B2D2E;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.23);
+    width: 100%;
+    height: 72px;
+}
+
+.masthead-branding {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.masthead-header {
+    color: #FAFBFD;
+    font-family: 'GE Inspira Sans';
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-right: 20px;
+}
+
+.masthead-tab {
+    float: left;
+    background: #373B3D;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.masthead-tab-text {
+    font-family: 'GE Inspira Sans';
+    font-size: 16px;
+    color: #FAFBFD;
+    line-height: 20px;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+
+
+.tab-selected {
+    background-color: #525457;
+    box-shadow: inset 0 -4px 0px 0px #51BDDF !important;
+}
+
+
+.tabcontent {
+    display: none;
+    border: none;
+    margin-top: 3px;
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+.dropdown-text {
+    font-family: 'GE Inspira Sans';
+    font-size: 16px;
+    color: #525457;
+    line-height: 20px;
+    margin-right: 10px;
+}
+
+.dropbutton {
+    background: #ECECF0;
+    width: 250px;
+    height: 34px;
+    font-family: 'GE Inspira Sans';
+    font-size: 16px;
+    color: #2B2D2E;
+    line-height: 20px;
+    border: 1px solid #D7D8DB;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+    .dropbutton:hover, .dropbutton:focus {
+        border: 1px solid #037AA6;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #ECECF0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.23);
+}
+
+    .dropdown-content a {
+        font-family: 'GE Inspira Sans';
+        font-size: 16px;
+        color: #2B2D2E;
+        letter-spacing: 0;
+        line-height: 20px;
+        display: block;
+        width: 250px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+        .dropdown-content a:hover {
+            border: 1px solid #037AA6;
+        }
+
+.dropdown-inner-container {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    border: dashed;
+}
+
+.select_icon {
+    border:dashed;
+    float:right;
+}
+
+
+.show {
+    display: block;
+}
+
+
+#seriesTable {
+    font-family: 'GE Inspira Sans';
+    width: 38%;
+    text-align: center;
+    border: none;
+    margin-left: 40px;
+}
+
+
+#studyTable {
+    font-family: 'GE Inspira Sans';
+    width: 55%;
+    text-align: center;
+    border: none;
+    margin-left: 50px;
+}
+
+
+.text-16 {
+    font-size: 1.6rem;
+    line-height: 2.2rem
+}
+
+
+.table-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.table {
+    border-collapse: collapse;
+    color: #2B2D2E;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+    .table tbody {
+        display: block;
+        height: 600px;
+        overflow: auto;
+    }
+
+
+    .table tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        cursor: pointer;
+    }
+
+
+    .table tbody td {
+        height: 60px;
+        padding: 10px;
+        word-break: break-all;
+        border-left: 1px solid #C5C7C9;
+        border-right: 1px solid #C5C7C9;
+        border-bottom: 1px solid #C5C7C9;
+    }
+
+
+.table--striped th {
+    border-bottom: 1px solid #2B2D2E;
+}
+
+.table--striped tbody tr:nth-child(odd) {
+    background: #F4F5F8;
+}
+
+.table--striped tbody tr:hover {
+    background-color: #D4E6F1;
+}
+
+
+
+.selected {
+    background-color: #D4E6F1 !important;
+}
+
+.execute-workflow-container {
+    display: flex;
+    align-items: center;
+    margin: 50px;
+}
+
+
+.button {
+    align-items: center;
+    background: #02536C;
+    border: none;
+    border-radius: .3rem;
+    color: #FAFBFD;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "GE Inspira Sans","ge-inspira-sans","ge-sans","sans-serif";
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+    height: 4.4rem;
+    line-height: 1.4rem;
+    padding: 1.2rem 2.5rem;
+    text-align: center;
+    transition: ease-in-out .2s all;
+    transition-property: color, box-shadow, background, border;
+    white-space: nowrap;
+    width: auto;
+    margin: 5px;
+}
+
+    .button:hover {
+        background: #002C39;
+        color: #FAFBFD;
+    }
+
+    .button:focus {
+        background: #002C39;
+        color: #FAFBFD;
+    }
+
+    .button:active {
+        background: #002C39;
+        color: #FAFBFD;
+    }
+
+    .button:disabled {
+        background: #F4F5F8;
+        cursor: not-allowed;
+        pointer-events: none;
+        color: #929498;
+    }
+
+
+.resultText {
+    font-family: "GE Inspira Sans";
+    color: #525457;
+    font-size: 16px;
+    position: absolute;
+    left: 1150px;
+}
+
+.execute-workflow-loader-container {
+    display: flex;
+    align-items: center;
+}
+
+.status-text {
+    font-family: "GE Inspira Sans";
+    color: #525457;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+
+.loader {
+    position: relative;
+    width: 320px;
+    margin-left: 30px;
+}
+
+    .loader:before {
+        content: '';
+        background: #ECECF0;
+        border-radius: 2px;
+        position: absolute;
+        top: -3px;
+        right: 0px;
+        bottom: -3px;
+        left: -3px;
+    }
+
+    .loader .loaderBar {
+        position: absolute;
+        border-radius: 2px;
+        top: -3px;
+        bottom: -3px;
+        background: #51BDDF;
+        width:0px;
+    }
+
+/*
+
+        .loader .loaderBar {
+        position: absolute;
+        border-radius: 2px;
+        top: -3px;
+        bottom: -3px;
+        background: #51BDDF;
+        animation: loadingbar 0.5s linear infinite;
+    }
+@keyframes loadingbar {
+    0% {
+        left: 0%;
+        right: 100%;
+        width: 0%;
+    }
+
+    25% {
+        left: 0%;
+        right: 50%;
+        width: 50%;
+    }
+
+
+    75% {
+        right: 0%;
+        left: 50%;
+        width: 50%;
+    }
+
+    100% {
+        left: 100%;
+        right: 0%;
+        width: 0%;
+    }
+}
+
+@keyframes loadingbarcomplete {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+    */
+
+iframe {
+    display: block;
+    border: none;
+    width: inherit;
+    height: inherit;
+}

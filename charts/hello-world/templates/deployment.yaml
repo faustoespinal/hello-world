@@ -1,0 +1,61 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "{{ .Values.appName }}"
+  labels:
+    app: "{{ .Values.appName }}"
+spec:
+  {{- if .Values.global.iso }}
+  type: LoadBalancer
+  {{- else }}
+  type: NodePort
+  {{- end }}
+  ports:
+  - name: http
+    port: {{ .Values.internalPort }}
+    protocol: TCP
+    targetPort: {{ .Values.internalPort }}
+    nodePort: {{ .Values.externalPort }}
+  selector:
+    app: "{{ .Values.appName }}"
+  sessionAffinity: None
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{ .Values.appName }}"
+  labels:
+    app: "{{ .Values.appName }}"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "{{ .Values.appName }}"
+  template:
+    metadata:
+      labels:
+        app: "{{ .Values.appName }}"
+    spec:
+      containers:
+      - name: "{{ .Values.appName }}"
+      {{- if .Values.global.iso }}
+        image: "{{ .Values.global.registry_base_url }}/{{ .Values.image.imageFolder }}/{{ .Values.image.imageName }}:{{ .Values.image.imageTag }}"
+      {{- else }}
+        image: "{{ .Values.image.artifactory }}/{{ .Values.image.imageFolder }}/{{ .Values.image.imageName }}:{{ .Values.image.imageTag }}"
+      {{- end }}
+        imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: "{{ .Values.configName }}"
+
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: {{ .Values.internalPort }}
+      {{- if (not .Values.global.iso) }}
+      imagePullSecrets:
+      - name: regcred4
+      {{- end }}
