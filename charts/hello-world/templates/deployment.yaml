@@ -6,17 +6,12 @@ metadata:
   labels:
     app: "{{ .Values.appName }}"
 spec:
-  {{- if .Values.global.iso }}
   type: LoadBalancer
-  {{- else }}
-  type: NodePort
-  {{- end }}
   ports:
   - name: http
     port: {{ .Values.internalPort }}
     protocol: TCP
     targetPort: {{ .Values.internalPort }}
-    nodePort: {{ .Values.externalPort }}
   selector:
     app: "{{ .Values.appName }}"
   sessionAffinity: None
