@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  APP_NAME: "{{ .Values.appName }}"
+  QIDO_URL: "{{ .Values.configMap.qidoURL }}"
+  WORKFLOW_URL: "{{ .Values.configMap.workflowURL }}"
+  IMAGING_URL: "{{ .Values.configMap.imagingURL }}"
+  IMAGING_HOST_URL: "{{ .Values.configMap.imagingHost }}"
+kind: ConfigMap
+metadata:
+  name: "{{ .Values.configName }}"
