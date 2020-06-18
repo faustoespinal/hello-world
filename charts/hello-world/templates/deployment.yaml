@@ -39,11 +39,7 @@ spec:
     spec:
       containers:
       - name: "{{ .Values.appName }}"
-      {{- if .Values.global.iso }}
-        image: "{{ .Values.global.registry_base_url }}/{{ .Values.image.imageFolder }}/{{ .Values.image.imageName }}:{{ .Values.image.imageTag }}"
-      {{- else }}
-        image: "{{ .Values.image.artifactory }}/{{ .Values.image.imageFolder }}/{{ .Values.image.imageName }}:{{ .Values.image.imageTag }}"
-      {{- end }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: Always
         envFrom:
         - configMapRef:
