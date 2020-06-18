@@ -12,7 +12,6 @@ spec:
     port: {{ .Values.internalPort }}
     protocol: TCP
     targetPort: {{ .Values.internalPort }}
-    nodePort: {{ .Values.externalPort }}
   selector:
     app: "{{ .Values.appName }}"
   sessionAffinity: None
